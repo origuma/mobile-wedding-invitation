@@ -17,7 +17,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          APP_KAKAOMAP_JAVASCRIPT_KEY: ${{ secrets.APP_KAKAOMAP_JAVASCRIPT_KEY }}
+          VITE_APP_KAKAOMAP_JAVASCRIPT_KEY: ${{ secrets.APP_KAKAOMAP_JAVASCRIPT_KEY }}
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
