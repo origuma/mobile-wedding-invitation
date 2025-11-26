@@ -9,11 +9,11 @@
         "parents": [
           {
             "relation": "아버지",
-            "name": "장아빠"
+            "name": "김진성"
           },
           {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "임미영"
           }
         ]
       },
@@ -23,16 +23,16 @@
         "parents": [
           {
             "relation": "아버지",
-            "name": "황아빠"
+            "name": "윤천"
           },
           {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "김인자"
           }
         ]
       }
     },
-    "eventDetail": "2024년 2월 17일 (토) 14:00\n아펠가모 공덕 라로브홀"
+    "eventDetail": "2026년 4월 4일 (토) 11:00\n\n영등포 더컨벤션 2층 다이너스티홀"
   },
   "hostInfo": [
     {
@@ -47,13 +47,13 @@
           "tossAccount": ""
         },
         {
-          "name": "장아빠",
+          "name": "김진성",
           "relation": "아버지",
           "bank": "농협",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
+          "name": "임미영",
           "relation": "어머니",
           "bank": "농협",
           "account": "123-45-678901"
@@ -72,13 +72,13 @@
           "tossAccount": ""
         },
         {
-          "name": "황아빠",
+          "name": "윤천",
           "relation": "아버지",
           "bank": "농협",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
+          "name": "김인자",
           "relation": "어머니",
           "bank": "농협",
           "account": "123-45-678901"
