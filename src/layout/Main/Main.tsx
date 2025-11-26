@@ -8,7 +8,7 @@ const Main = () => {
     <div>
       <MainImg src={mainImg} />
       <MainTitle>{greeting.title}</MainTitle>
-      <SubTitle>{greeting.eventDetail}</SubTitle>
+      <SubTitle>{greeting.eventDetail.split('\n')[0]}</SubTitle>
     </div>
   );
 };
