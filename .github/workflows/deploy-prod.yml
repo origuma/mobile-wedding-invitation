@@ -17,8 +17,8 @@ jobs:
       - name: Create .env file
         run: |
           echo "VITE_APP_KAKAOMAP_JAVASCRIPT_KEY=${{ secrets.APP_KAKAOMAP_JAVASCRIPT_KEY }}" > .env
-          echo "VITE_APP_FIREBASE_PROJECT_ID=${{ secrets.APP_FIREBASE_PROJECT_ID }}" > .env
-          echo "VITE_APP_FIREBASE_DATABASE_URL=${{ secrets.APP_FIREBASE_DATABASE_URL }}" > .env
+          echo "VITE_APP_FIREBASE_PROJECT_ID=${{ secrets.APP_FIREBASE_PROJECT_ID }}" >> .env
+          echo "VITE_APP_FIREBASE_DATABASE_URL=${{ secrets.APP_FIREBASE_DATABASE_URL }}" >> .env
 
       - name: Build project
         run: npm run build
