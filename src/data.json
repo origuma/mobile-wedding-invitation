@@ -87,21 +87,25 @@
     }
   ],
   "mapInfo": {
-    "address1": "아펠가모 공덕 라로브홀",
-    "address2": "서울 마포구 마포대로 92\n효성해링턴스퀘어 B동 7층\n02-2197-0230",
-    "naverMap": "https://naver.me/IM4RDses",
-    "kakaoMap": "https://kko.kakao.com/otznTfkVWV",
-    "lat": 37.54222,
-    "lon": 126.952708
+    "address1": "영등포 더컨벤션 2층 다이너스티홀",
+    "address2": "서울 영등포구 국회대로38길 2",
+    "naverMap": "https://naver.me/FLyTW33t",
+    "kakaoMap": "https://kko.kakao.com/IZ35V_E3rb",
+    "lat": 37.5260,
+    "lon": 126.9020
   },
   "locationInfo": [
     {
       "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5·6호선 공덕역 7번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 경의·중앙선, 공항철도 공덕역 10번 출구 (도보 30초)"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 2·5호선 영등포구청역 4번 출구 (도보 3분)"
     },
     {
-      "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 3-5층 2시간 무료주차\n(안내데스크에서 주차권 수령)"
+      "title": "\uD83D\uDCCD 버스",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 서울버스 (70-3, 5620, 6631, 6637, 7612, 영등포02, 영등포12)"
+    },
+    {
+      "title": "\uD83D\uDCCD 자가용",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 웨딩홀 지하주차장 1, 2층 / 웨딩홀 맞은편 공영주차장 (2시간)"
     }
   ],
   "emojis": [
