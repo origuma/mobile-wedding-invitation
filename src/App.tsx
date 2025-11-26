@@ -36,10 +36,10 @@ function App() {
 
   return (
     <Container>
-      <Wrapper>
+      <Wrapper style={{ paddingBottom: 10 }}>
         <Main />
       </Wrapper>
-      <Wrapper>
+      <Wrapper style={{ paddingTop: 10 }}>
         <Heading1>모시는 글</Heading1>
         <Invitation />
       </Wrapper>
@@ -55,7 +55,7 @@ function App() {
         <Heading1>오시는 길</Heading1>
         <Location />
       </Wrapper>
-      <Wrapper>
+      <Wrapper style={{ paddingTop: 10 }}>
         <Heading1>신랑 신부에게</Heading1>
         <Guestbook />
       </Wrapper>
