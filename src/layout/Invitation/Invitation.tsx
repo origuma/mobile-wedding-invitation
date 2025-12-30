@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import data from 'data.json';
 import Host from '../Contact/Host.tsx';
@@ -24,9 +25,35 @@ const Invitation = () => {
     weeks.push(calendarCells.slice(i, i + 7));
   }
 
+  // Split message to separate the quote and render it with special styling
+  const quoteText = '정현주 <다시, 사랑> 중에서';
+  const lines = greeting.message.split('\n');
+  const processedLines = lines.map((line, index) => {
+    if (line.includes(quoteText)) {
+      return <QuoteText key={index}>{quoteText}</QuoteText>;
+    }
+    return line;
+  });
+
+  // Remove empty line after quote to reduce spacing
+  const finalLines = processedLines.filter((line, index) => {
+    // Remove empty line that comes right after quote
+    if (index > 0 && typeof processedLines[index - 1] !== 'string' && line === '') {
+      return false;
+    }
+    return true;
+  });
+
   return (
     <InvitationWrapper>
-      <Paragraph>{greeting.message}</Paragraph>
+      <Paragraph>
+        {finalLines.map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            {index < finalLines.length - 1 && '\n'}
+          </React.Fragment>
+        ))}
+      </Paragraph>
       <Host />
       <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
       <CalendarContainer>
@@ -166,4 +193,12 @@ const DateBadge = styled.span<{ isSelected: boolean }>`
   font-weight: ${({ isSelected }) => (isSelected ? 600 : 400)};
   background-color: ${({ isSelected }) => (isSelected ? '#f0d7c7' : 'transparent')};
   color: ${({ isSelected }) => (isSelected ? '#b35438' : 'inherit')};
+`;
+
+const QuoteText = styled.span`
+  display: block;
+  font-size: 0.85em;
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 `;
