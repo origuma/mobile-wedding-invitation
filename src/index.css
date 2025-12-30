@@ -32,3 +32,27 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+/* 이미지 다운로드 방지 */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  -webkit-touch-callout: none;
+}
+
+/* PhotoSwipe 갤러리 이미지 보호 */
+.pswp__img {
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
