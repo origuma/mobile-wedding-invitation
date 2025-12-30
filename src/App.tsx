@@ -21,40 +21,84 @@ function App() {
     };
   }, []);
 
-  // 이미지 다운로드 방지: 우클릭 방지
+  // 이미지 다운로드 방지: 강화된 보호
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'IMG') {
+      if (target.tagName === 'IMG' || target.closest('img')) {
         e.preventDefault();
+        e.stopPropagation();
         return false;
       }
     };
 
     const handleDragStart = (e: DragEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'IMG') {
+      if (target.tagName === 'IMG' || target.closest('img')) {
         e.preventDefault();
+        e.stopPropagation();
         return false;
       }
     };
 
     const handleSelectStart = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'IMG') {
+      if (target.tagName === 'IMG' || target.closest('img')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl+S, Ctrl+P 등 저장/인쇄 단축키 방지
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p' || e.key === 'S' || e.key === 'P')) {
+        e.preventDefault();
+        return false;
+      }
+      // F12 (개발자 도구) 방지
+      if (e.key === 'F12') {
         e.preventDefault();
         return false;
       }
     };
 
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('dragstart', handleDragStart);
-    document.addEventListener('selectstart', handleSelectStart);
+    // 모든 이미지에 이벤트 리스너 추가
+    const addImageProtection = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        img.addEventListener('contextmenu', handleContextMenu as EventListener, true);
+        img.addEventListener('dragstart', handleDragStart as EventListener, true);
+        img.addEventListener('selectstart', handleSelectStart, true);
+        img.setAttribute('draggable', 'false');
+      });
+    };
+
+    // 초기 이미지 보호
+    addImageProtection();
+
+    // 전역 이벤트 리스너 (capture phase)
+    document.addEventListener('contextmenu', handleContextMenu, true);
+    document.addEventListener('dragstart', handleDragStart, true);
+    document.addEventListener('selectstart', handleSelectStart, true);
+    document.addEventListener('keydown', handleKeyDown, true);
+
+    // 새로운 이미지가 추가될 때마다 보호 적용
+    const observer = new MutationObserver(() => {
+      addImageProtection();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
 
     return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('dragstart', handleDragStart);
-      document.removeEventListener('selectstart', handleSelectStart);
+      document.removeEventListener('contextmenu', handleContextMenu, true);
+      document.removeEventListener('dragstart', handleDragStart, true);
+      document.removeEventListener('selectstart', handleSelectStart, true);
+      document.removeEventListener('keydown', handleKeyDown, true);
+      observer.disconnect();
     };
   }, []);
 

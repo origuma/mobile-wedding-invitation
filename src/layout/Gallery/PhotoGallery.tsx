@@ -37,6 +37,15 @@ const PhotoGallery = () => {
                   src={image.source}
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
+                  onContextMenu={(e) => {
+                    e.preventDefault();
+                    return false;
+                  }}
+                  onDragStart={(e) => {
+                    e.preventDefault();
+                    return false;
+                  }}
+                  draggable={false}
                 />
               )}
             </Item>

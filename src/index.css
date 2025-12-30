@@ -33,26 +33,38 @@ body {
   font-style: normal;
 }
 
-/* 이미지 다운로드 방지 */
+/* 이미지 다운로드 방지 - 강화 */
 img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
   pointer-events: auto;
-  -webkit-touch-callout: none;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* PhotoSwipe 갤러리 이미지 보호 */
-.pswp__img {
+.pswp__img,
+.pswp__zoom-wrap img {
   -webkit-user-drag: none !important;
   user-drag: none !important;
   -webkit-user-select: none !important;
   user-select: none !important;
   -webkit-touch-callout: none !important;
+  pointer-events: auto !important;
+}
+
+/* 이미지 컨테이너 보호 */
+img::selection {
+  background: transparent !important;
+}
+
+img::-moz-selection {
+  background: transparent !important;
 }

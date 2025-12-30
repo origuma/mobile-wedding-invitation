@@ -4,9 +4,25 @@ import mainImg from '@/assets/images/01.jpg'
 
 const Main = () => {
   const { greeting } = data;
+  
+  const handleContextMenu = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.preventDefault();
+    return false;
+  };
+
+  const handleDragStart = (e: React.DragEvent<HTMLImageElement>) => {
+    e.preventDefault();
+    return false;
+  };
+
   return (
     <div>
-      <MainImg src={mainImg} />
+      <MainImg 
+        src={mainImg} 
+        onContextMenu={handleContextMenu}
+        onDragStart={handleDragStart}
+        draggable={false}
+      />
       <MainTitle>{greeting.title}</MainTitle>
     </div>
   );
