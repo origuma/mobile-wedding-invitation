@@ -19,6 +19,9 @@ const MainImg = styled.img`
   width: 90%;
   max-width: 450px;
   padding-top: 20px;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: auto;
 `;
 
 const MainTitle = styled.p`
