@@ -46,21 +46,21 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
     source: image06,
     width: 640,
     height: 960
-  },{
-    alt: 'image07',
-    source: image07,
-    width: 640,
-    height: 960
+  //},{
+    //alt: 'image07',
+    //source: image07,
+    //width: 640,
+    //height: 960
   },{
     alt: 'image08',
     source: image08,
     width: 640,
     height: 960
-  },{
-    alt: 'image09',
-    source: image09,
-    width: 640,
-    height: 960
+  //},{
+  //  alt: 'image09',
+  //  source: image09,
+  //  width: 640,
+  //  height: 960
   },{
     alt: 'image10',
     source: image10,
