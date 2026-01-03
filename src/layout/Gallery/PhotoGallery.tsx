@@ -4,12 +4,11 @@ import images from '@/layout/Gallery/Images.ts';
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
-    cursor: 'pointer',
     objectFit: 'cover', // 전체 이미지가 보이도록 맞추고 싶을 때는 contain / 비율 유지하고 싶을 때는 cover
     width: '100px',
     height: '150px',
     userSelect: 'none',
-    pointerEvents: 'auto',
+    pointerEvents: 'none', // 이미지에 직접 터치/클릭 불가능하게 설정
     ...({
       WebkitUserDrag: 'none',
     } as React.CSSProperties),
@@ -33,22 +32,41 @@ const PhotoGallery = () => {
               width={image.width}
               height={image.height}>
               {({ ref, open }) => (
-                <img
-                  style={smallItemStyles}
-                  alt={image.alt}
-                  src={image.source}
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                  onContextMenu={(e) => {
-                    e.preventDefault();
-                    return false;
-                  }}
-                  onDragStart={(e) => {
-                    e.preventDefault();
-                    return false;
-                  }}
-                  draggable={false}
-                />
+                <div
+                  style={{
+                    position: 'relative',
+                    display: 'inline-block',
+                    width: '100px',
+                    height: '150px',
+                  }}>
+                  <img
+                    style={smallItemStyles}
+                    alt={image.alt}
+                    src={image.source}
+                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    onContextMenu={(e) => {
+                      e.preventDefault();
+                      return false;
+                    }}
+                    onDragStart={(e) => {
+                      e.preventDefault();
+                      return false;
+                    }}
+                    draggable={false}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      cursor: 'pointer',
+                      zIndex: 1,
+                    }}
+                    onClick={open}
+                  />
+                </div>
               )}
             </Item>
           );

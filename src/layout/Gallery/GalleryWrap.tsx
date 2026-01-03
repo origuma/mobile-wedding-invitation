@@ -52,6 +52,8 @@ const WhiteGradientOverlay = styled.div`
     rgba(255, 255, 255, 0) 0%,
     rgb(255, 255, 255) 90%
   );
+  z-index: 2;
+  pointer-events: none;
 `;
 
 const PlusButton = styled.div`

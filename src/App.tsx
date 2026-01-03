@@ -74,8 +74,26 @@ function App() {
       });
     };
 
+    // PhotoSwipe 팝업 내 이미지 보호
+    const protectPhotoSwipeImages = () => {
+      // PhotoSwipe 팝업 내 이미지 찾기
+      const pswpImages = document.querySelectorAll('.pswp__img, .pswp__zoom-wrap img');
+      
+      pswpImages.forEach((img) => {
+        const imgElement = img as HTMLImageElement;
+        
+        // 이미지에 pointer-events: none 적용하여 직접 터치 방지
+        imgElement.style.pointerEvents = 'none';
+        
+        // PhotoSwipe의 제스처 처리를 위해 컨테이너는 터치 가능하게 유지
+        // 이미지 자체만 pointer-events: none으로 설정하면
+        // PhotoSwipe의 터치 이벤트 핸들러가 컨테이너에서 작동함
+      });
+    };
+
     // 초기 이미지 보호
     addImageProtection();
+    protectPhotoSwipeImages();
 
     // 전역 이벤트 리스너 (capture phase)
     document.addEventListener('contextmenu', handleContextMenu, true);
@@ -86,6 +104,7 @@ function App() {
     // 새로운 이미지가 추가될 때마다 보호 적용
     const observer = new MutationObserver(() => {
       addImageProtection();
+      protectPhotoSwipeImages();
     });
 
     observer.observe(document.body, {

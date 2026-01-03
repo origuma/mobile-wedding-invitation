@@ -44,7 +44,7 @@ img {
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
-  pointer-events: auto;
+  pointer-events: none !important;
   -webkit-touch-callout: none !important;
   -webkit-tap-highlight-color: transparent;
 }
@@ -57,7 +57,7 @@ img {
   -webkit-user-select: none !important;
   user-select: none !important;
   -webkit-touch-callout: none !important;
-  pointer-events: auto !important;
+  pointer-events: none !important;
 }
 
 /* 이미지 컨테이너 보호 */
