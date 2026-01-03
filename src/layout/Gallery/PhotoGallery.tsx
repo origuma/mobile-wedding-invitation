@@ -13,9 +13,24 @@ const PhotoGallery = () => {
       WebkitUserDrag: 'none',
     } as React.CSSProperties),
   };
+  const options = {
+    // Disable zoom button
+    zoom: false,
+    // Disable pinch-to-zoom gesture
+    pinchToZoom: false,
+    // Disable wheel zoom
+    wheelToZoom: false,
+    // Disable pinch-to-close gesture
+    pinchToClose: false,
+    // Disable double-tap-to-zoom
+    getDoubleTapZoom: () => 1,
+    // Hide the zoom button in the UI
+    zoomEl: false,
+  };
+
 
   return (
-    <Gallery>
+    <Gallery options={options}>
       <div
         style={{
           display: 'grid',
