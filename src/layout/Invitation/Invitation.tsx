@@ -107,7 +107,6 @@ const InvitationWrapper = styled.div`
 `;
 
 const CalendarContainer = styled.div`
-  width: 280px;
   padding: 24px 28px;
   border-radius: 20px;
   border: 1px solid rgba(210, 210, 210, 0.8);
