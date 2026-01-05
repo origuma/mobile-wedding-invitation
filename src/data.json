@@ -42,7 +42,7 @@
           "name": "김우혁",
           "relation": "신랑",
           "bank": "카카오뱅크",
-          /n"account": "3333-15-7613989",
+          \n"account": "3333-15-7613989",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
@@ -50,13 +50,13 @@
           "name": "김진성",
           "relation": "아버지",
           "bank": "수협",
-          "account": "383-62-011087"
+          \n"account": "383-62-011087"
         },
         {
           "name": "임미영",
           "relation": "어머니",
           "bank": "농협",
-          /n"account": "477035-52-093419"
+          \n"account": "477035-52-093419"
         }
       ]
     },
