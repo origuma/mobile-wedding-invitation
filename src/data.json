@@ -67,7 +67,7 @@
           "name": "윤연주",
           "relation": "신부",
           "bank": "우리은행",
-          "account": "1002-647-108625",
+          \n"account": "1002-647-108625",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
@@ -75,13 +75,13 @@
           "name": "윤천",
           "relation": "아버지",
           "bank": "신한",
-          "account": "110-110-993116"
+          \n"account": "110-110-993116"
         },
         {
           "name": "김인자",
           "relation": "어머니",
           "bank": "신한",
-          "account": "315-02-416556"
+          \n"account": "315-02-416556"
         }
       ]
     }
