@@ -49,14 +49,14 @@
         {
           "name": "김진성",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "수협",
+          "account": "383-62-011087"
         },
         {
           "name": "임미영",
           "relation": "어머니",
           "bank": "농협",
-          "account": "123-45-678901"
+          "account": "477035-52-093419"
         }
       ]
     },
@@ -66,22 +66,22 @@
         {
           "name": "윤연주",
           "relation": "신부",
-          "bank": "토스뱅크",
-          "account": "1234-5678-9012",
+          "bank": "우리은행",
+          "account": "1002-647-108625",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
           "name": "윤천",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "신한",
+          "account": "110-110-993116"
         },
         {
           "name": "김인자",
           "relation": "어머니",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "신한",
+          "account": "315-02-416556"
         }
       ]
     }
