@@ -42,7 +42,7 @@
           "name": "김우혁",
           "relation": "신랑",
           "bank": "카카오뱅크",
-          \n"account": "3333-15-7613989",
+          "account": "3333-15-7613989",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
@@ -50,13 +50,13 @@
           "name": "김진성",
           "relation": "아버지",
           "bank": "수협",
-          \n"account": "383-62-011087"
+          "account": "383-62-011087"
         },
         {
           "name": "임미영",
           "relation": "어머니",
           "bank": "농협",
-          \n"account": "477035-52-093419"
+          "account": "477035-52-093419"
         }
       ]
     },
@@ -67,7 +67,7 @@
           "name": "윤연주",
           "relation": "신부",
           "bank": "우리은행",
-          \n"account": "1002-647-108625",
+          "account": "1002-647-108625",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
@@ -75,13 +75,13 @@
           "name": "윤천",
           "relation": "아버지",
           "bank": "신한",
-          \n"account": "110-110-993116"
+          "account": "110-110-993116"
         },
         {
           "name": "김인자",
           "relation": "어머니",
           "bank": "신한",
-          \n"account": "315-02-416556"
+          "account": "315-02-416556"
         }
       ]
     }
